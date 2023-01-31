@@ -1,19 +1,27 @@
+import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
+  const [heading , setHeading ] = useState(""); 
+
+  // useEffect Below illustrates comm with server . 
+
+  useEffect(() => {
+    fetch('/heading', {
+      method : 'GET'
+    })
+    .then(r => r.json())
+    .then(d => {
+      console.log(d)
+      setHeading(d.message)
+    })
+    .catch(e => console.log(e))
+  })
+
   return (
-    <div className="App">
-      <header className="App-header bg-black bg-blend-darken">
-        <h1 className='text-4xl text-slate-300 animate-pulse'> React Template Repository with the following packages Pre-installed :</h1>      
-        <ol className='pt-5'>
-           <li>React Router (v5) </li>
-           <li>Tailwind CSS </li>
-            <li> Configuration to use a proxy server.</li>
-            <li>React start script modified to use openssl legacy provider.</li>
-        </ol>
-      
-      </header>
-    </div>
+   <div className='font-main text-4xl p-5  bg-modal-bg text-heading min-h-screen align-middle items-center text-center'>
+        { heading === "" ? <h1 className='animate-pulse border-b-4 border-btn-bg'> Sith Shop</h1> : <h1 className='animate-pulse border-b-4 border-btn-bg'>{heading}</h1> }
+   </div>
   );
 }
 

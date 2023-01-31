@@ -1,0 +1,1 @@
+// Product list component to house and handle the dispay of products on the Home Page 
