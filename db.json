@@ -5,19 +5,13 @@
       {
         "id": 1,
         "img": "https://www.pexels.com/photo/folded-assorted-color-shirts-581087/",
-        "name": "Kids",
         "category" : "Kitchen",
-        "price" : "25"
-        "name": "Kids",
-        "category" : "Kitchen",
-        "price" : "25"
+        "price" : "25",
+        "name": "Kids"
       },
       {
         "id": 2,
         "img": "https://www.pexels.com/photo/apartment-chairs-comfort-contemporary-373530/",
-        "name": "Dining",
-        "category" : "Kitchen",
-        "price" : "25"
         "name": "Dining",
         "category" : "Kitchen",
         "price" : "25"
