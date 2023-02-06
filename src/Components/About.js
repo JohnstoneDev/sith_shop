@@ -1,5 +1,6 @@
  import React from 'react';
  import sale from '../Images/sale3.jpg'
+ import "../Components/About.css"
 
 function About(){
     return(
