@@ -38,7 +38,7 @@ function Login({ onLogin }) {
   if (success === !null) return <NavLink to={'/me'} />;
 
   return (
-    <div className='grid justify-items-center'>
+    <div className='flex flex-col  justify-between'>
       <h1>Login</h1>
       <form className='grid grid-cols-2 gap-3 m-10' onSubmit={handleSubmit}>
         <label htmlFor='email'>Email</label>
@@ -68,12 +68,16 @@ function Login({ onLogin }) {
       <div >
         
         <p>
-          Don't have an account? &nbsp;
-          <Link to={`/signup`}>
+        Don't have an account? &nbsp;
+          <Link to={`/signup`} >
            Sign Up
           </Link>
         </p>
       </div>
+      <div className='bg-[#A97777] mt-60 h-12'>
+    
+      </div>
+
     </div>
   );
 }
