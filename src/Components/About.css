@@ -1,0 +1,18 @@
+.header {
+    font-size: 35px;
+    padding-top: 6%;
+    padding-left: 25%;
+}
+.one img{
+    width: 559px;
+    padding: 60px;
+    left: 10px;
+    margin-top: -70px;
+    margin-left: 100px;
+    border-radius: 150px 160px;
+}
+.one p{
+    padding-left: 650px;
+    margin-top: -685px;
+    line-height: 40px;
+}
