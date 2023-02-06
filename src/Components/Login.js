@@ -150,7 +150,7 @@ function Login({ onLogin }) {
         <p>
           Don't have an account? &nbsp;
           <Link to={`/signup`}>
-            Sign Up
+           Sign Up
           </Link>
         </p>
       </div>
