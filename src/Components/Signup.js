@@ -47,7 +47,7 @@ setErrors(validation(values))
                 {errors.password && <p>{errors.password}</p>}
 
                 <label>Confirm Password:</label>
-                <input type='password' placeholder='Enter Confirm Password'
+                <input type='password' placeholder='Confirm Password'
                 name='confirm_password' onChange={handleInput} className='form-control'/>
                  {errors.confirm_password && <p>{errors.confirm_password}</p>}
 
