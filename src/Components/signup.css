@@ -1,0 +1,63 @@
+h5 {
+    padding: 40px;
+    padding-left: 40px;
+    text-align: left;
+}
+ h3 {
+    padding-left: 40px;
+    text-align: left;
+    font-size: 25px;margin-bottom: 15px;
+    
+    
+}
+
+.signup_form {
+    width: 80%;
+    margin: left;
+
+  }
+  label,input {
+    /* In order to define widths */
+    display: inline-block;
+    background: transparent;
+  
+    
+  }
+  label {
+    width: 30%;
+    /* Positions the label text beside the input */
+    text-align: left;
+  }
+  label+input {
+    width: 30%;
+    /* Large margin-right to force the next element to the new-line
+             and margin-left to create a gutter between the label and input */
+    margin: 0 30% 0 4%;
+    text-decoration: underline;
+  }
+  /* Only the submit button is matched by this selector,
+         but to be sure you could use an id or class for that button */
+  input+input {
+    float: right;
+   
+  }
+  .signup {
+   
+    text-align: left;
+    padding-left: 40px;
+    
+  }
+  .signup_btn{
+    background-color: #A97777;
+    border-width: 15px;
+    border-color: #A97777;
+    border-radius: 40px;
+    color: white;
+    
+  }
+  .login{
+    color: #A97777;
+  }
+  .accnt{
+    margin-top: 40px;
+  }
