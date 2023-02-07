@@ -19,7 +19,7 @@ else if (!password_pattern.test(values.password)){
 }
 if (values.confirm_password === "" || String(values.confirm_password) !== String(values.password)){
     console.log(values.confirm_password + '___' + values.password)
-    error.confirm_password = "Password not matched"
+    error.confirm_password = "Password didn't match"
 }
 
 return error;

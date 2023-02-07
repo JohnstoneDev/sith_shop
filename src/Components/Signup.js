@@ -2,6 +2,8 @@
 import React from 'react'
 import { useState } from 'react'
 import validation from './validation'
+import '../Components/signup.css'
+import { Link } from 'react-router-dom'
 
 function Signup() {
 
@@ -26,16 +28,16 @@ setErrors(validation(values))
 
   return (
     <div className="signup_container">
-        <div className='signup_form'> 
+        <div > 
         <h5>Hi There! Shop with us today.</h5>
-        <h3>Sith Shop </h3>
-        <div className='form'>
+        <h3><b>Sith Shop </b></h3>
+        <div className='signup_form'>
                 <form onSubmit = {handleValidation}>
-                    <label> Username:</label>
+                    <label className='user'> Username:</label>
                 <input type= 'username' placeholder='Enter Username'
                name='username' onChange={handleInput} className='form-control'/>
 
-                <label>Email:</label>
+                <label className='email'>Email:</label>
                 <input type='email' placeholder= 'Enter Email'
                 name='email' onChange={handleInput} className='form-control'/>
                   {errors.email && <p>{errors.email}</p>}
@@ -50,8 +52,8 @@ setErrors(validation(values))
                 <input type='password' placeholder='Confirm Password'
                 name='confirm_password' onChange={handleInput} className='form-control'/>
                  {errors.confirm_password && <p>{errors.confirm_password}</p>}
-
-                <div><button>Sign Up</button></div>
+               <div className='accnt'><b>Already Have an Account?  <Link className='login' to="/login">Login</Link></b></div>
+                <div className='signup'><button className='signup_btn'>Sign Up</button></div>
             </form>
         </div>
         </div>
