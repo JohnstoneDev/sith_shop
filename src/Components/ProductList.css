@@ -1,4 +1,4 @@
 .content  h2{
-    text-align: left;
-    border: 2px solid red;
+    text-align: right;
+    margin-left: 50px;
 }
