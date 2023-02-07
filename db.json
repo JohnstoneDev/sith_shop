@@ -1,0 +1,34 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "img": "https://www.pexels.com/photo/folded-assorted-color-shirts-581087/",
+        "name": "Kids"
+      },
+      {
+        "id": 2,
+        "img": "https://www.pexels.com/photo/apartment-chairs-comfort-contemporary-373530/",
+        "name": "Dining"
+      },
+      {
+        "id": 3,
+        "img": "https://www.pexels.com/photo/white-rolling-armchair-beside-table-1957478/",
+        "name": "Office"
+      },
+      {
+        "id": 4,
+        "img": "https://www.pexels.com/photo/bedroom-furniture-with-dining-tables-and-couch-in-modern-store-7535060/",
+        "name": "Bedroom"
+      },
+      {
+        "id": 5,
+        "img": "https://www.pexels.com/photo/white-wooden-kitchen-cabinet-1599791/",
+        "name": "Kitchen"
+      },
+      {
+        "id": 6,
+        "img": "https://www.pexels.com/photo/photo-of-living-room-1457842/",
+        "name": "Living room"
+      }
+    ]
+  }
