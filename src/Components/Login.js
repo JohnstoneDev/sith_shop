@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useHistory } from 'react-router-dom';
 
 function Login({ onLogin }) {
   const [email, setEmail] = useState('');
@@ -7,6 +7,7 @@ function Login({ onLogin }) {
   const [errors, setErrors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [success, setSuccess] = useState(null);
+  const history = useHistory()
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -23,11 +24,13 @@ function Login({ onLogin }) {
         r.json().then((user) => {
           onLogin(user);
           setSuccess(user);
+          history.push('/products')
         });
       } else {
         r.json().then((err) => {
           setErrors(err.errors);
           console.log(err);
+          history.push('/products')
         });
       }
     });
@@ -35,7 +38,7 @@ function Login({ onLogin }) {
     setPassword('');
   }
 
-  if (success === !null) return <NavLink to={'/me'} />;
+  
 
   return (
     <div className='flex flex-col  justify-between'>
@@ -60,7 +63,7 @@ function Login({ onLogin }) {
         />
 
         <button className=" bg-[#A97777] rounded-full" type='submit'>{isLoading ? 'Loading...' : 'Login'}</button>
-
+        
         {errors.map((err) => (
           <li key={err}>{err}</li>
         ))}
