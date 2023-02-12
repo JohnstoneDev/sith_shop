@@ -1,32 +1,58 @@
 // Product list component to house and handle the dispay of products on the Home Page 
 
-import React, {useState, useEffect} from 'react';
-import "../Components/ProductList.css";
+import  { useState, useEffect } from 'react';
+
+
+import Product from './Product';
 
 function ProductList(){
-  const [products, setProducts] = useState([])
-    fetch("http://localhost:3000/products")
-      .then((res) => res.json())
-      .then((data) => { setProducts(data)
-        console.log(data)
-      })
+  const [products, setProducts] = useState([]); 
+  const [categories, setCategories ] = useState([]);
+
+  
+  useEffect(() => {
+
+    fetch('/categories')
+    .then(r => r.json())
+    .then(d => {
+      setCategories(d)
+      // console.log(categories , "<= Categories fetched from db.json")
+    })
+    .catch(e => console.log(e))
+
+    fetch('/products')
+    .then(r => r.json())
+    .then(d => {
+      setProducts(d)
+      // console.log(products,"<= Products fetched from db.json")
+    })
+    .catch(e => console.log(e))
+ 
+  },[])
+
     return(
-        <>
-            <div className='content'>
-                <h2><b>Products</b></h2>
-                <h3>Category</h3>
-                <ul>
-                    <h4>All</h4>
-                    <ol>Office</ol>
-                    <ol>Living room</ol>
-                    <ol>Kitchen</ol>
-                    <ol>Bedroom</ol>
-                    <ol>Dining</ol>
-                    <ol>Kids</ol>
-                    <h4>Price</h4>
-                </ul>
-            </div>
-        </>
+        <section className='flex p-5 m-5 gap-8'>
+          <div>
+            <ul className='text-left'>
+                {categories.map((cat) => {
+                  return (
+                  <li 
+                  key={Math.random() * 10}
+                  className='p-1 cursor-pointer border-b-4 border-b-btn-bg'
+                  >
+                    {cat}
+                    </li> )
+                })}
+            </ul>
+          </div>
+
+          <div>
+            {products.map((product) => {
+              return <Product key={product.id} product={product}/>
+            })}
+          </div>
+
+        </section>      
     )
 }
 
