@@ -1,4 +1,6 @@
 {
+    "heading" : { "message" : "Welcome to the Sith Shop" } , 
+    
     "products": [
       {
         "id": 1,
@@ -46,5 +48,6 @@
 
     "categories" : [
       "All", "Office" , "Living Room", "Kitchen", "Bedroom", "Dining", "Kids", "Price"
-    ]
+    ] 
+
   }
