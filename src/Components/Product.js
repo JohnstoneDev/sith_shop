@@ -1,12 +1,9 @@
 // A single product 
 
-import { Link } from "react-router-dom"; 
+import { Link  } from "react-router-dom"; 
 
 function Product( {  product }){
     const { id ,img , name , category , price } = product ; 
-
-
-    console.log(img)
 
     return(
         <Link to={`/products/${id}`}>
