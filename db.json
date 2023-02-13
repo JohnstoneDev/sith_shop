@@ -1,6 +1,6 @@
 {
     "heading" : { "message" : "Welcome to the Sith Shop" } , 
-    
+        
     "products": [
       {
         "id": 1,
