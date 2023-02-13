@@ -7,11 +7,9 @@ import Paths from './Components/Routes';
 
 function Footer(){
   return(
-      <div className='relative p-10'>
-          <footer>
-                  <p> ProDev Copyright 2023. All Rights Reserved. </p>
+          <footer className=''>
+                 ProDev Copyright 2023. All Rights Reserved.
           </footer>   
-      </div>
   )
 }
 
