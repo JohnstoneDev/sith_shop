@@ -1,13 +1,13 @@
 {
     "heading" : { "message" : "Welcome to the Sith Shop" } , 
-    
+        
     "products": [
       {
         "id": 1,
         "img": "https://www.pexels.com/photo/folded-assorted-color-shirts-581087/",
-        "name": "Kids",
         "category" : "Kitchen",
-        "price" : "25"
+        "price" : "25",
+        "name": "Kids"
       },
       {
         "id": 2,
