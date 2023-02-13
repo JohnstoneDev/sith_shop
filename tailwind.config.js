@@ -4,7 +4,7 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],  theme: {
     fontFamily : {
-      'main' : ['Source Code Pro', 'sans-serif']
+      'main' : ['Zilla Slab', 'sans-serif']
     },
     colors : {
       'main-bg' : '#FFFFFF', 
