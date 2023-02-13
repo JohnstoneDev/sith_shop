@@ -3,7 +3,8 @@
 import { Link  } from "react-router-dom"; 
 
 function Product( {  product }){
-    const { id ,img , name , category , price } = product ; 
+    const { id , img , name , category , price } = product ; 
+
 
     return(
         <Link to={`/products/${id}`}>
